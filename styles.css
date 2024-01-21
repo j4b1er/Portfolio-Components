@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --max-width: 1088px;
+
+  --color-black: #121212;
+}
+
+.main-navbar {
+  background-color: var(--color-black);
+}
+
+.main-navbar__container {
+  max-width: var(--max-width);
+  padding: 1rem;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-navbar__container--ul {
+  list-style: none;
+
+  display: flex;
+  gap: 1rem;
+}
