@@ -8,17 +8,26 @@
 
 :root {
   --max-width: 1088px;
+  --navbar-height: 4rem;
 
   --color-black: #121212;
+  --color-white: #ebebeb;
+  --color-prtimary-100: #f6eacd;
+  --color-prtimary-100-rgb: 246, 234, 205;
+  --color-prtimary-300: #dfbf5e;
 }
 
 .main-navbar {
   background-color: var(--color-black);
+  height: var(--navbar-height);
+
+  font-family: "Roboto", sans-serif;
 }
 
 .main-navbar__container {
   max-width: var(--max-width);
-  padding: 1rem;
+  height: 100%;
+  padding: 0 1rem;
   margin: 0 auto;
 
   display: flex;
@@ -32,4 +41,29 @@
 
   display: flex;
   gap: 1rem;
+}
+
+.main-navbar__container--link {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+
+  background-color: var(--color-prtimary-100);
+  color: var(--color-black);
+  font-size: 1rem;
+  border-radius: 10rem;
+  font-weight: 400;
+}
+
+.main-navbar__container--link:hover {
+  background-color: var(--color-prtimary-300);
+}
+
+.main-navbar__container--contact {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+
+  background-color: transparent;
+  color: var(--color-white);
+  border-radius: 10rem;
+  border: 1px solid rgba(var(--color-prtimary-100-rgb), 0.1);
 }
