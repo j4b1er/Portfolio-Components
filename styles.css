@@ -75,8 +75,19 @@
   transition: all 0.2s ease-in-out;
 }
 
+.main-navbar__container--contact span {
+  position: relative;
+  display: block;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
 .main-navbar__container--contact:hover {
-  color: #121212;
+  color: var(--color-black);
+}
+
+.main-navbar__container--contact:hover span {
+  animation: btn-translate 0.4s ease-in-out;
 }
 
 .main-navbar__container--contact:hover.main-navbar__container--contact::before {
@@ -96,13 +107,31 @@
   width: 0px;
   background-color: var(--color-prtimary-300);
 
-  transition: all 0.2s 0.2s ease-in-out;
+  transition: all 0.2s 0.1s ease-in-out;
 }
 
-.main-navbar__container--contact::after {
-  content: "Contact";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@keyframes btn-translate {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--color-white);
+  }
+
+  45% {
+    transform: translateX(150%);
+    color: var(--color-white);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-150%);
+    opacity: 0;
+    color: var(--color-black);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    color: var(--color-black);
+  }
 }
