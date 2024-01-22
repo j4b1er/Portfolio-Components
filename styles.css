@@ -87,7 +87,7 @@
 }
 
 .main-navbar__container--contact:hover span {
-  animation: btn-translate 0.4s ease-in-out;
+  animation: btn-translate 0.3s ease-in-out;
 }
 
 .main-navbar__container--contact:hover.main-navbar__container--contact::before {
@@ -107,31 +107,43 @@
   width: 0px;
   background-color: var(--color-prtimary-300);
 
-  transition: all 0.2s 0.1s ease-in-out;
+  transition: all 0.2s 0.1s;
 }
 
 @keyframes btn-translate {
   0% {
-    opacity: 1;
     transform: translateX(0);
     color: var(--color-white);
+    opacity: 1;
   }
 
   45% {
     transform: translateX(150%);
     color: var(--color-white);
+    opacity: 1;
+  }
+
+  46% {
+    transform: translateX(150%);
+    color: var(--color-white);
     opacity: 0;
   }
 
-  50% {
+  54% {
     transform: translateX(-150%);
-    opacity: 0;
     color: var(--color-black);
+    opacity: 0;
+  }
+
+  55% {
+    transform: translateX(-150%);
+    color: var(--color-black);
+    opacity: 1;
   }
 
   100% {
     transform: translateX(0);
-    opacity: 1;
     color: var(--color-black);
+    opacity: 1;
   }
 }
